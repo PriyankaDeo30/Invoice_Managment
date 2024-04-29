@@ -1,0 +1,23 @@
+{% load static %}
+{% include 'navbar.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Invoices</title>
+    <link rel="stylesheet" href="/static/css/stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action=" ">
+            {% csrf_token %}
+            <p>Are you sure you want to delete the selected items?</p>
+            <div class="buttons">
+                <button type="submit" class="delete-btn">Delete</button>
+                <a href=" /list_invoice"> <div class="cancel-btn">Cancel</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

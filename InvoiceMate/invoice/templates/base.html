@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: #e9ecef; /* Light blue background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+            margin-top: 50px; /* Add margin to the top */
+        }
+        .footer {
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #343a40; /* Dark background color */
+            color: #fff; /* White text color */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{title}}</h1>
+
+<div class="container mt-5">
+    <h1 class="text-center">{{ title }}</h1>
+    <h2 class="text-center">Your Invoice Partner</h2> <!-- Added heading -->
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container bg-dark text-white">
+        <p>Copyright &copy; {{ "now"|date:"Y" }} Alive Digital. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

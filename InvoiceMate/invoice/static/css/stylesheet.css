@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.container {
+    max-width: 100%;
+    padding: 20px;
+    margin: 20px 0; /* Remove auto margin */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    float: left; /* Float the container to the left */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: inline-block;
+    width: 30%; /* Adjust width as needed */
+}
+input[type=number] {
+        width: 100px; /* Adjust the width as needed */
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+    }
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(70% - 22px); /* Adjust for padding and border */
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    padding: 20px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 500px; /* Adjust width as needed */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    label {
+        width: 100%;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    textarea {
+        width: 100%;
+    }
+}
+
+/* Define styles for the table */
+.table {
+    width:100%;
+    border-collapse: collapse;
+}
+
+/* Define styles for table header */
+.table th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+    padding: 20px;
+}
+
+/* Define styles for table rows */
+.table tr {
+    border-bottom: 1px solid #ccc;
+}
+
+/* Define styles for alternating row colors */
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Define styles for table cells */
+.table td {
+    padding: 10px;
+}
+
+/* Define styles for table links */
+.table a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Define styles for table hover effect */
+.table tr:hover {
+    background-color: #e0e0e0;
+}
+.container1 {
+    max-width: 100%; /* Adjust max-width as needed */
+    margin: auto; /* Center the container horizontally */
+    padding: 20px; /* Equal padding from both sides */
+    text-align: center; /* Center the content inside the container */
+    font-family: Arial, sans-serif; /* Specify the font family */
+    font-size:16px; /* Specify the font size */
+}
+
+
+.form1 {
+    display: inline-block; /* Display the form inline */
+    background-color: #f0f0f0; /* Background color for the form */
+    padding: 10px; /* Padding for the form elements */
+    border-radius: 5px; /* Rounded corners for the form */
+}
+.success {
+    background-color: #d4edda; /* Background color for success messages */
+    color: #155724; /* Text color for success messages */
+    padding: 10px; /* Padding around the success message */
+    border: 1px solid #c3e6cb; /* Border for the success message */
+    border-radius: 5px; /* Rounded corners for the success message */
+    margin-bottom: 10px; /* Bottom margin to separate messages */
+}
+.total-invoices {
+    display: inline-block;
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Same as width for a perfect circle */
+    background-color: #007bff; /* Background color */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Font size */
+    line-height: 30px; /* Center the text vertically */
+    text-align: center; /* Center the text horizontally */
+    border-radius: 50%; /* Creates a circle */
+}
+.paging-nav {
+  text-align: right;
+  padding-top: 2px;
+}
+
+.paging-nav a {
+  margin: auto 1px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1px 7px;
+  background: #91b9e6;
+  color: white;
+  border-radius: 3px;
+}
+
+.paging-nav .selected-page {
+  background: #187ed5;
+  font-weight: bold;
+}
+.scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display:none;
+}
+
+.scrollToTop:hover {
+    background-color: #0056b3;
+}
